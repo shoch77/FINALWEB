@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/app_LOGO.png' %}" alt="logo" style="width:150px; height:auto;">
+        <h1>Welcome to the Games World!</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'list_games' %}">View Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <footer>
+        <p>&copy; 2024 Games Collection</p>
+    </footer>
+</body>
+</html>

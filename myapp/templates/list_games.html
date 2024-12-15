@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Games</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Games List</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="games">
+        <h2>Games Available</h2>
+        <ul>
+            {% for game in games %}
+                <li>
+                    <p>Game: {{ game.title }}</p>
+                    <p>Delevoper: {{ game.delevoper }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Games Colliction</p>
+    </footer>
+</body>
+</html>
